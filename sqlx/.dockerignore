@@ -1,0 +1,8 @@
+*
+!src
+!Cargo.*
+
+target
+.idea
+docker*
+*.sqlite

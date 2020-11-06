@@ -1,0 +1,14 @@
+[package]
+authors = ["Harald Niesche <harald@niesche.de>"]
+edition = "2018"
+name = "diagnostics-service"
+version = "0.1.0"
+
+[dependencies]
+actix-web = "3.1.0"
+chrono = "0.4.19"
+structopt = "0.3.20"
+
+[dependencies.sqlx]
+version = "0.3.5"
+features = [ "runtime-async-std", "sqlite", "chrono", "macros" ]

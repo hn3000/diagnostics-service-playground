@@ -1,0 +1,29 @@
+FROM rust:1-slim-buster as builder
+
+WORKDIR /build
+
+COPY Cargo.* ./
+RUN mkdir src
+RUN echo "fn main() {}" > src/main.rs
+RUN cargo fetch
+
+# RUN ls -lR
+
+RUN cargo build --release
+
+COPY src ./src/
+
+#RUN ls -lR
+
+RUN cargo test --release
+RUN cargo build --release
+
+FROM debian:buster-slim
+
+WORKDIR /run
+
+COPY --from=builder /build/target/release/diagnostics-service .
+
+RUN ls -l .
+
+CMD [ "./diagnostics-service" ]

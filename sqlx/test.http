@@ -1,0 +1,32 @@
+###
+GET http://127.0.0.1:9457/
+
+
+###
+GET http://127.0.0.1:9457/123/blah/index.html
+
+
+###
+
+POST http://127.0.0.1:9457/log/2/lala/ernst
+
+Blah blah
+
+
+###
+
+POST http://127.0.0.1:9457/log/2/lala/egal
+
+Blah blub hier steht ein total schlimmer und wichtiger Fehler drin.
+Auf der nächsten Zeile steht die ent-
+scheidende Information, die es uns 
+ermöglicht, die Welt zu retten.
+
+###
+
+POST http://127.0.0.1:9457/log/2/lala/egal
+
+Blah blub hier steht ein total schlimmer und wichtiger Fehler drin.
+Auf der nächsten Zeile steht die ent-
+scheidende Information, die es uns 
+ermöglicht, die "Welt" zu retten.
